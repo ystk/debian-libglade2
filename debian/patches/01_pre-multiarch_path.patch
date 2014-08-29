@@ -1,0 +1,12 @@
+Index: libglade2-2.6.4/glade/glade-init.c
+===================================================================
+--- libglade2-2.6.4.orig/glade/glade-init.c	2009-03-17 15:19:00.000000000 +0100
++++ libglade2-2.6.4/glade/glade-init.c	2013-12-26 12:54:42.313268959 +0100
+@@ -185,6 +185,7 @@ get_module_path (void)
+     
+     module_path = g_strconcat (module_path_env ? module_path_env : "",
+ 			       module_path_env ? G_SEARCHPATH_SEPARATOR_S : "",
++			       "/usr/lib/libglade/2.0/", G_SEARCHPATH_SEPARATOR_S,
+ 			       default_dir, NULL);
+     
+     result = pango_split_file_list (module_path);

@@ -1,3 +1,30 @@
+libglade2 (1:2.6.4-2) unstable; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/libglade2-dev.lintian:
+    - Removed, libglade2-dev depends on python now.
+
+  [ Loïc Minier ]
+  * Fix globbing in watch file.
+
+  [ Josselin Mouette ]
+  * Patch from Steve Langasek to add MA support. Closes: #650787.
+    + Use MA installation paths.
+    + Switch do DH compat 9.
+    + Update {build-,}dependencies.
+  * Bump shlibs to take the new module path into account.
+  * Use python:any dependency in the -dev package.
+  * Drop the .la file.
+  * 01_pre-multiarch_path.patch: new patch. Search modules in 
+    the pre-multiarch version’s path.
+  * Bump standards version.
+  * Fix spelling error in description. Closes: #687367.
+  * Move to section oldlibs.
+  * Switch to 3.0 quilt format.
+  * Use dh-autoreconf. Closes: #558573.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 26 Dec 2013 12:56:27 +0100
+
 libglade2 (1:2.6.4-1) unstable; urgency=low
 
   [ Loic Minier ]
